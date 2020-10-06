@@ -8,10 +8,10 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.minhaescola</groupId>
-	<artifactId>escola</artifactId>
+	<groupId>org.escolabomsaber</groupId>
+	<artifactId>secretariaEscola</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>minhaescola</name>
+	<name>secretariaEscola</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
