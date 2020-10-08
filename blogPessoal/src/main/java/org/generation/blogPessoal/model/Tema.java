@@ -18,11 +18,11 @@ import com.sun.istack.NotNull;
 @Table(name = "tb_tema")
 public class Tema {
 
-	@Id
+	@Id // Criando ID
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
+	@NotNull //criando descrição / ñ nulo 
 	private String descricao;
 	
 	@OneToMany (mappedBy = "tema", cascade = CascadeType.ALL) // "Link" da tebela tema com a tabela postagem

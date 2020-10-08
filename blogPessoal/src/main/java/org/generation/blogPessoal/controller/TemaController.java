@@ -1,6 +1,5 @@
 package org.generation.blogPessoal.controller;
 
-import java.lang.annotation.Retention;
 import java.util.List;
 
 import org.generation.blogPessoal.model.Tema;

@@ -2,7 +2,6 @@ package org.generation.blogPessoal.controller;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 
 import org.generation.blogPessoal.model.Postagem;
 import org.generation.blogPessoal.repository.PostagemRepository;
