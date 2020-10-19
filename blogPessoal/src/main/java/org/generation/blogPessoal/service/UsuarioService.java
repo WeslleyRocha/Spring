@@ -19,6 +19,9 @@ public class UsuarioService {
 	
 	public Usuario CadastrarUsuario(Usuario usuario)
 	{
+		if(repository.findByUsuario(usuario.getUsuario()).isPresent()) //Não deixa criar dois usuarios iguais! 
+            return null;
+		
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		
 		String senhaEncoder = encoder.encode(usuario.getSenha());
@@ -43,6 +46,7 @@ public class UsuarioService {
 			    
 			    user.get().setToken(authHeader);
 			    user.get().setNome(usuario.get().getNome());
+			    user.get().setSenha(usuario.get().getSenha());
 			    
 			    return user;
 			}

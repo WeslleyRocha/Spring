@@ -31,7 +31,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	
 	
-	@Override
+	@Override   //libera alguns caminhos do controller para que o client tenha acesso sem usar um token
 	protected void configure (HttpSecurity http) throws Exception
 	{
 		http.authorizeRequests()
@@ -39,7 +39,8 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/usuarios/cadastrar").permitAll()
 		.anyRequest().authenticated()
 		.and().httpBasic()
-		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+		.and().sessionManagement()
+		.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and().cors()
 		.and().csrf().disable();
 		
